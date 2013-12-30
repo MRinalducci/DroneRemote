@@ -9,7 +9,7 @@ This project was developped with Android Studio (Intellij), but is also compatib
 
 Don't forget to import the project and not to open it.
 
-I will be happy if you let me now if you used this project to make yours. :)
+I will be happy if you let me now if you used this project to make yours :)
 
 This application is available on the Google play at https://play.google.com/store/apps/details?id=ch.rinalducci.DroneRemote
 
