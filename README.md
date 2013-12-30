@@ -3,43 +3,55 @@ DroneRemote
 
 ## Description
 
-DroneRemote is an application for piloting a drone with Bluetooth SPP (Serial Port Profile) protocol on an Android device (8+)
+DroneRemote is an Android application for piloting drones with Bluetooth SPP (Serial Port Profile) protocol on an Android device (SDK: 8+).
+
+I will be happy if you let me now if you used this project to make yours. :)
 
 ## Changelog
 
-30.12.2013 : Release on Github
+30.12.2013 : Release on GitHub
 
 ## Getting Started
 
 The following frame (11 bytes) is sent via Bluetooth :
-Start = 240 
-Throttle = 0-100%
-Yaw = 0-100%
-Pitch = 0-100% 
-Roll = 0-100% 
-yAccelerometer = 60-110 degrees
-zAccelerometer = 60-110 degrees
-LED = 0-1 boolean
-REC = 0-1 boolean
-Checksum = 0-255
-End = 250
+- Start = 240 
+- Throttle = 0-100%
+- Yaw = 0-100%
+- Pitch = 0-100% 
+- Roll = 0-100% 
+- yAccelerometer = 60-110 degrees
+- zAccelerometer = 60-110 degrees
+- LED = 0-1 boolean
+- REC = 0-1 boolean
+- Checksum = 0-255
+- End = 250
 
 The following frame (6 bytes) is recieved via Bluetooth :
-Start = 240 
-PowerVolt = 0-255
-PowerPourcent = 0-255
-Temperatur = 0-255
-Checksum = 0-255
-End = 250
+- Start = 240 
+- PowerVolt = 0-255
+- PowerPourcent = 0-255
+- Temperatur = 0-255
+- Checksum = 0-255
+- End = 250
 
 Checksum calculation:
+```java
 for (byte data : datas) checksum += data;
 checksum = checksum & 0xff;
 checksum = 0xff - checksum
+```
 
 ## Reporting bugs, contributing & support
 
-For support, contributing or issues send a mail to : contact@rinalducci.ch
+For issues, contributing or support, please send a mail to : contact@rinalducci.ch
+
+## Uses
+
+- Google Bluetooth Sample (modified)
+- RoundedImageView by Makeramen
+- Joystick by MobileAnarchy (modified)
+- Toggle button by KP Bird (modified)
+- Icon by VisualPharm (modified - http://www.visualpharm.com)
 
 ## License
 
