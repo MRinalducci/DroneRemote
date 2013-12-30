@@ -5,6 +5,8 @@ DroneRemote
 
 DroneRemote is an Android application for piloting drones with Bluetooth SPP (Serial Port Profile) protocol on an Android device (SDK: 8+).
 
+This project was developped with Android Studio, but is also compatible with Eclipse.
+
 I will be happy if you let me now if you used this project to make yours. :)
 
 ## Changelog
