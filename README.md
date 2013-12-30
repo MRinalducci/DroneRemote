@@ -51,7 +51,7 @@ checksum = 0xff - checksum
 
 For issues, contributing or support, please send a mail to : contact@rinalducci.ch
 
-## Uses
+## This project uses
 
 - Google Bluetooth Sample (modified)
 - RoundedImageView by Makeramen
