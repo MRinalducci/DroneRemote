@@ -37,7 +37,7 @@ for (byte data : datas) checksum += data;
 checksum = checksum & 0xff;
 checksum = 0xff - checksum
 
-## Reporting bugs & contributing & support
+## Reporting bugs, contributing & support
 
 For support, contributing or issues send a mail to : contact@rinalducci.ch
 
