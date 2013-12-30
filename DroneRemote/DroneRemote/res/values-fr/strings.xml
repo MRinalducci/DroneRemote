@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+	  @author Marco Rinalducci
+	  @version 1.0.0 
+
+	  Copyright (C) 2013 The Android Open Source Project
+
+      Licensed under the Apache License, Version 2.0 (the "License");
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+
+-->
+<resources>
+	<string name="app_name">"DroneRemote"</string>
+
+	<string name="btn_find">"Recherche de drone"</string>
+	<string name="bt_not_enabled_leaving">"Bluetooth non enclenché, application quittée&#8230;"</string>
+	<string name="button_scan">"Recherche de drone"</string>
+	<string name="none_paired">"Aucun drone jumelé"</string>
+	<string name="scanning">"Recherche de drone&#8230;"</string>
+	<string name="none_found">"Pas de drone trouvé"</string>
+	<string name="select_device">"Se connecter au drone"</string>
+
+	<string name="arme">"Armer le drone"</string>
+	<string name="connect">"Se connecter au drone"</string>
+	<string name="option">"Options"</string>
+	<string name="checklist">"Checklist"</string>
+	<string name="propos">"A propos&#8230;"</string>
+	<string name="emploi">"Mode d\'emploi"</string>
+
+	<string name="title_connected_to">"connecté à"</string>
+	<string name="title_connecting">"en connexion&#8230;"</string>
+	<string name="title_not_connected">"non connecté"</string>
+	<string name="title_paired_devices">"Périphériques jumelés"</string>
+	<string name="title_other_devices">"Autres périphériques disponibles"</string>
+	<string name="title_arme">"armé"</string>
+	<string name="title_dearme">"désarmé"</string>
+
+	<string name="tts_trim_cap_select">"correction lassai séléctionné"</string>
+	<string name="tts_trim_cap_deselect">"correction lassai désséléctionné"</string>
+	<string name="tts_trim_tanguage_select">"correction tanguage séléctionné"</string>
+	<string name="tts_trim_tanguage_deselect">"correction tanguage désséléctionné"</string>
+	<string name="tts_trim_roulis_select">"correction rouli séléctionné"</string>
+	<string name="tts_trim_roulis_deselect">"correction roulis désséléctionné"</string>
+
+	<string name="tts_led_select">"laide allumée"</string>
+	<string name="tts_led_deselect">"laide éteinte"</string>
+	<string name="tts_rec_select">"caméra enregistre"</string>
+	<string name="tts_rec_deselect">"caméra enregistre pas"</string>
+
+	<string name="tts_trim_augmentation">"augmentation"</string>
+	<string name="tts_trim_diminution">"diminution"</string>
+	<string name="tts_bluetooth_connected_at">"Bloutousse connecté à"</string>
+	<string name="tts_bluetooth_not_connected">"Bloutousse non connecté"</string>
+	<string name="tts_bluetooth_in_connection">"Bloutousse en connexion"</string>
+
+	<string name="tts_countdown_1_minute">"une minutes de temps de vol restant"</string>
+	<string name="tts_countdown_30_second">"trente secondes de temps de vol restant"</string>
+	<string name="tts_countdown_10_second">"dix secondes de temps de vol restant"</string>
+	<string name="tts_countdown_5_second">"cinq secondes de temps de vol restant"</string>
+	<string name="tts_countdown_finish">"attention le temps de vol est écoulé"</string>
+
+	<string name="tts_arme">"drone armé"</string>
+	<string name="tts_dearme">"drone désarmé"</string>
+
+	<string name="tts_charge">"batterie à "</string>
+
+	<string name="bluetooth_not_available">"Bluetooth non disponible"</string>
+	<string name="bluetooth_connected_at">"Connecté à "</string>
+
+	<string name="error_pref">"La valeur saisie est fausse!"</string>
+
+	<string name="message_close">"Attention!\nCeci entraînera la déconnexion.\nVoulez-vous vraiment quitter?"</string>
+	<string name="message_propos">"Attention!\nCeci entraînera la déconnexion.\nVoulez-vous vraiment accéder au menu?"
+	</string>
+	<string name="message_gaz_invert">"Attention!\nVous avez inversé la valeur des gaz."</string>
+	<string name="message_arme_on">"Attention!\nVous allez armer le drone.\nVoulez-vous vraiment armer le drone?"
+	</string>
+	<string name="message_arme_off">"Attention!\nVous allez désarmer le drone.\nVoulez-vous vraiment désarmer le
+		drone?"
+	</string>
+	<string name="message_arme_gaz">"Vous n'avez pas les gaz à 0% pour armer le drone."</string>
+	<string name="message_arme_not_connected">"Vous n'êtes pas connecté au drone, vous ne pouvez pas l'armer."</string>
+	<string name="message_arme_progress_arme">"Armement du drone en cours&#8230;"</string>
+	<string name="message_arme_progress_dearme">"Désarmement du drone en cours&#8230;"</string>
+	<string name="message_language">"Attention!\nCeci entraînera la déconnexion.\nVoulez-vous vraiment changer la
+		language?"
+	</string>
+	<string name="message_yes">"Oui"</string>
+	<string name="message_no">"Non"</string>
+
+	<string name="main_status">"Statut drone:"</string>
+	<string name="main_countdown">"Temps de vol restant:"</string>
+	<string name="main_countup">"Temps de vol:"</string>
+	<string name="main_power">"Tension batterie:"</string>
+	<string name="main_charge">"Charge batterie:"</string>
+	<string name="main_temp">"Température:"</string>
+	<string name="main_gaz">"Gaz: 0 %"</string>
+	<string name="main_cap">"Corr. Lacet"</string>
+	<string name="main_tanguage">"Corr. Tang."</string>
+	<string name="main_roulis">"Corr. Roul."</string>
+	<string name="main_cap_text">"Correction Lacet: "</string>
+	<string name="main_tanguage_text">"Correction Tanguage: "</string>
+	<string name="main_roulis_text">"Correction Roulis: "</string>
+
+	<string name="legals_title_dev">"Développeur :"</string>
+	<string name="legals_dev">"Marco Rinalducci"</string>
+	<string name="legals_title_year">"Année :"</string>
+	<string name="legals_year">"2013"</string>
+	<string name="legals_title_version">"Version :"</string>
+	<string name="legals_title_build">"Build :"</string>
+	<string name="legals_title_package">"Package :"</string>
+	<string name="legals_title_uses">"Utilises :"</string>
+	<string name="legals_uses">"- Google Bluetooth Exemple (modifié)\n- RoundedImageView par Makeramen\n- Joystick par
+		MobileAnarchy (modifié)\n- Toggle button par KP Bird (modifié)\n- Icône par VisualPharm
+		(modifié)\n(http://www.visualpharm.com)"
+	</string>
+	<string name="legals_copyright">"© Droits d&apos;auteur - Marco Rinalducci, 2013. Tous droits réservés."</string>
+
+	<string name="pref_title_General">"Options générales"</string>
+	<string name="pref_title_Update">"Mise à jour des données"</string>
+	<string name="pref_title_Gaz">"Commande des gaz"</string>
+	<string name="pref_title_Time">"Gestion du temps"</string>
+	<string name="pref_title_Trim">"Corrections des commandes"</string>
+	<string name="pref_title_Invert">"Inversions des commandes"</string>
+	<string name="pref_title_Sensibility">"Sensibilités des commandes"</string>
+
+	<string name="pref_title_Language">"Langue"</string>
+	<string name="pref_summary_Language">"Changer la langue (rafraîchi)"</string>
+
+	<string name="pref_title_AnnounceOnOff">"Annonces vocales"</string>
+	<string name="pref_summary_Announce_On">"activées"</string>
+	<string name="pref_summary_Announce_Off">"désactivées"</string>
+
+	<string name="pref_title_ReadOnOff">"Télémètrie"</string>
+	<string name="pref_summary_Read_On">"activée"</string>
+	<string name="pref_summary_Read_Off">"désactivée"</string>
+
+	<string name="pref_title_CameraOnOff">"Caméra"</string>
+	<string name="pref_summary_Camera_On">"activée"</string>
+	<string name="pref_summary_Camera_Off">"désactivée"</string>
+
+	<string name="pref_title_DebugOnOff">"Débogage LogCat"</string>
+	<string name="pref_summary_Debug_On">"activé"</string>
+	<string name="pref_summary_Debug_Off">"désactivé"</string>
+
+	<string name="pref_title_UpdatePeriod">"Période d'envoi des données"</string>
+	<string name="pref_summary_UpdatePeriod">"En millisecondes (défaut = 50)"</string>
+
+	<string name="pref_title_MaxTimeout">"Timeout d'envoi des données"</string>
+	<string name="pref_summary_MaxTimeout">"Nombre de période (défaut = 10)"</string>
+
+	<string name="pref_title_GazPeriod">"Période d'actualisation des gaz"</string>
+	<string name="pref_summary_GazPeriod">"En millisecondes (défaut = 100)"</string>
+
+	<string name="pref_title_GazMaxMin">"Plages des gaz"</string>
+	<string name="pref_summary_GazMaxMin">"En pourcent (défaut = 15)"</string>
+
+	<string name="pref_title_SensibilityCap">"Sensibilité du Lacet"</string>
+	<string name="pref_summary_SensibilityCap">"Ratio (défaut = 4)"</string>
+
+	<string name="pref_title_SensibilityTanguage">"Sensibilité du Tangage"</string>
+	<string name="pref_summary_SensibilityTanguage">"Ratio (défaut = 4)"</string>
+
+	<string name="pref_title_SensibilityRoulis">"Sensibilité du Roulis"</string>
+	<string name="pref_summary_SensibilityRoulis">"Ratio (défaut = 4)"</string>
+
+	<string name="pref_title_CountUpOnOff">"Chronomètre"</string>
+	<string name="pref_summary_CountUp_On">"activé"</string>
+	<string name="pref_summary_CountUp_Off">"désactivé"</string>
+
+	<string name="pref_title_CountDownOnOff">"Compte à rebours"</string>
+	<string name="pref_summary_CountDown_On">"activé"</string>
+	<string name="pref_summary_CountDown_Off">"désactivé"</string>
+
+	<string name="pref_title_CountDown">"Départ du compte à rebours"</string>
+	<string name="pref_summary_CountDown">"En minutes (défaut = 10)"</string>
+
+	<string name="pref_title_TrimCap">"Corr. du Lacet"</string>
+	<string name="pref_summary_TrimCap">"En pourcent (défaut = 0)"</string>
+
+	<string name="pref_title_TrimTanguage">"Corr. du Tangage"</string>
+	<string name="pref_summary_TrimTanguage">"En pourcent (défaut = 0)"</string>
+
+	<string name="pref_title_TrimRoulis">"Corr. du Roulis"</string>
+	<string name="pref_summary_TrimRoulis">"En pourcent (défaut = 0)"</string>
+
+	<string name="pref_title_TrimXCam">"Corr. de la caméra en X"</string>
+	<string name="pref_summary_TrimXCam">"En degré (défaut = 10)"</string>
+
+	<string name="pref_title_TrimYCam">"Corr. de la caméra en Y"</string>
+	<string name="pref_summary_TrimYCam">"En degré (défaut = 10)"</string>
+
+	<string name="pref_title_InvertGazOnOff">"Inv. des gaz"</string>
+	<string name="pref_summary_InvertGaz_On">"activé"</string>
+	<string name="pref_summary_InvertGaz_Off">"désactivé"</string>
+
+	<string name="pref_title_InvertCapOnOff">"Inv. du lacet"</string>
+	<string name="pref_summary_InvertCap_On">"activé"</string>
+	<string name="pref_summary_InvertCap_Off">"désactivé"</string>
+
+	<string name="pref_title_InvertTanguageOnOff">"Inv. du tangage"</string>
+	<string name="pref_summary_InvertTanguage_On">"activé"</string>
+	<string name="pref_summary_InvertTanguage_Off">"désactivé"</string>
+
+	<string name="pref_title_InvertRoulisOnOff">"Inv. du roulis"</string>
+	<string name="pref_summary_InvertRoulis_On">"activé"</string>
+	<string name="pref_summary_InvertRoulis_Off">"désactivé"</string>
+
+	<string name="pref_title_InvertXCamOnOff">"Inv. de la caméra en X"</string>
+	<string name="pref_summary_InvertXCam_On">"activé"</string>
+	<string name="pref_summary_InvertXCam_Off">"désactivé"</string>
+
+	<string name="pref_title_InvertYCamOnOff">"Inv. de la caméra en Y"</string>
+	<string name="pref_summary_InvertYCam_On">"activé"</string>
+	<string name="pref_summary_InvertYCam_Off">"désactivé"</string>
+
+	<string name="service_connection_failed">"Impossible de se connecter&#8230;"</string>
+	<string name="service_connection_lost">"La connexion à été perdue&#8230; Reconnexion&#8230;"</string>
+	<string name="service_connection_lost_reconnect">"La connexion à été perdue&#8230; Reconnexion&#8230;"</string>
+
+	<string name="checklist_1">"1. Branchez la batterie LiPo"</string>
+	<string name="checklist_2">"2. Branchez la sonde de tension"</string>
+	<string name="checklist_3">"3. Connectez le smartphone au drone"</string>
+	<string name="checklist_4">"4. Contrôlez la charge de la batterie"</string>
+	<string name="checklist_5">"5. Mettre les gaz à 0%"</string>
+	<string name="checklist_6">"6. Armez le drone"</string>
+	<string name="checklist_7">"7. Décollez !"</string>
+	<string name="checklist_erase">"Effacer"</string>
+
+	<string name="gaz_percent">"Gaz: "</string>
+	<string name="image_desc">" "</string>
+
+</resources>

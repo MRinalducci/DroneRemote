@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+	  @author Marco Rinalducci
+	  @version 1.0.0 
+
+	  Copyright (C) 2013 The Android Open Source Project
+
+      Licensed under the Apache License, Version 2.0 (the "License");
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+
+-->
+<resources>
+	<string-array name="pref_MaxTimeout_entries">
+		<item>desaktivieren</item>
+		<item>5 Zeiträume</item>
+		<item>10 Zeiträume (Standard)</item>
+		<item>20 Zeiträume</item>
+		<item>30 Zeiträume</item>
+	</string-array>
+
+	<string-array name="pref_MaxTimeout_entryValues">
+		<item>-1</item>
+		<item>5</item>
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+	</string-array>
+
+	<string-array name="pref_language_entries">
+		<item>Deutsch</item>
+		<item>English</item>
+		<item>Français</item>
+	</string-array>
+
+	<string-array name="pref_language_entryValues">
+		<item>de</item>
+		<item>en</item>
+		<item>fr</item>
+	</string-array>
+</resources>

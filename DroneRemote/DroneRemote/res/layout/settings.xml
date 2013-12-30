@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+	  @author Marco Rinalducci
+	  @version 1.0.0 
+
+	  Copyright (C) 2013 The Android Open Source Project
+
+      Licensed under the Apache License, Version 2.0 (the "License");
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+	<PreferenceCategory
+			android:key="General"
+			android:title="@string/pref_title_General">
+
+		<ListPreference
+				android:key="Language"
+				android:title="@string/pref_title_Language"
+				android:summary="@string/pref_summary_Language"
+				android:entries="@array/pref_language_entries"
+				android:entryValues="@array/pref_language_entryValues"
+				android:defaultValue="en"/>
+
+		<CheckBoxPreference
+				android:key="AnnounceOnOff"
+				android:title="@string/pref_title_AnnounceOnOff"
+				android:summaryOn="@string/pref_summary_Announce_On"
+				android:summaryOff="@string/pref_summary_Announce_Off"
+				android:defaultValue="true"/>
+
+		<CheckBoxPreference
+				android:key="ReadOnOff"
+				android:title="@string/pref_title_ReadOnOff"
+				android:summaryOn="@string/pref_summary_Read_On"
+				android:summaryOff="@string/pref_summary_Read_Off"
+				android:defaultValue="false"/>
+
+		<CheckBoxPreference
+				android:key="CameraOnOff"
+				android:title="@string/pref_title_CameraOnOff"
+				android:summaryOn="@string/pref_summary_Camera_On"
+				android:summaryOff="@string/pref_summary_Camera_Off"
+				android:defaultValue="false"/>
+
+		<CheckBoxPreference
+				android:key="DebugOnOff"
+				android:title="@string/pref_title_DebugOnOff"
+				android:summaryOn="@string/pref_summary_Debug_On"
+				android:summaryOff="@string/pref_summary_Debug_Off"
+				android:defaultValue="false"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+			android:key="Update"
+			android:title="@string/pref_title_Update">
+
+		<EditTextPreference
+				android:key="UpdatePeriod"
+				android:title="@string/pref_title_UpdatePeriod"
+				android:summary="@string/pref_summary_UpdatePeriod"
+				android:defaultValue="50"
+				android:inputType="number"/>
+
+		<ListPreference
+				android:key="MaxTimeout"
+				android:title="@string/pref_title_MaxTimeout"
+				android:summary="@string/pref_summary_MaxTimeout"
+				android:entries="@array/pref_MaxTimeout_entries"
+				android:entryValues="@array/pref_MaxTimeout_entryValues"
+				android:defaultValue="10"/>
+		<!--
+		<EditTextPreference
+			android:key="MaxTimeout"
+			android:title="@string/pref_title_MaxTimeout"
+			android:summary="@string/pref_summary_MaxTimeout"
+			android:defaultValue="10"
+			android:inputType="number"/>
+		-->
+	</PreferenceCategory>
+
+	<PreferenceCategory
+			android:key="Time"
+			android:title="@string/pref_title_Time">
+
+		<CheckBoxPreference
+				android:key="CountUpOnOff"
+				android:title="@string/pref_title_CountUpOnOff"
+				android:summaryOn="@string/pref_summary_CountUp_On"
+				android:summaryOff="@string/pref_summary_CountUp_Off"
+				android:defaultValue="false"/>
+
+		<CheckBoxPreference
+				android:key="CountDownOnOff"
+				android:title="@string/pref_title_CountDownOnOff"
+				android:summaryOn="@string/pref_summary_CountDown_On"
+				android:summaryOff="@string/pref_summary_CountDown_Off"
+				android:defaultValue="false"/>
+
+		<EditTextPreference
+				android:key="CountDown"
+				android:title="@string/pref_title_CountDown"
+				android:summary="@string/pref_summary_CountDown"
+				android:defaultValue="10"
+				android:inputType="number"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+			android:key="Gaz"
+			android:title="@string/pref_title_Gaz">
+
+		<EditTextPreference
+				android:key="GazPeriod"
+				android:title="@string/pref_title_GazPeriod"
+				android:summary="@string/pref_summary_GazPeriod"
+				android:defaultValue="100"
+				android:inputType="number"/>
+
+		<EditTextPreference
+				android:key="GazMaxMin"
+				android:title="@string/pref_title_GazMaxMin"
+				android:summary="@string/pref_summary_GazMaxMin"
+				android:defaultValue="15"
+				android:inputType="number"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+			android:key="Sensibility"
+			android:title="@string/pref_title_Sensibility">
+
+		<EditTextPreference
+				android:key="SensibilityCap"
+				android:title="@string/pref_title_SensibilityCap"
+				android:summary="@string/pref_summary_SensibilityCap"
+				android:defaultValue="4"
+				android:inputType="numberDecimal"/>
+
+		<EditTextPreference
+				android:key="SensibilityTanguage"
+				android:title="@string/pref_title_SensibilityTanguage"
+				android:summary="@string/pref_summary_SensibilityTanguage"
+				android:defaultValue="4"
+				android:inputType="numberDecimal"/>
+
+		<EditTextPreference
+				android:key="SensibilityRoulis"
+				android:title="@string/pref_title_SensibilityRoulis"
+				android:summary="@string/pref_summary_SensibilityRoulis"
+				android:defaultValue="4"
+				android:inputType="numberDecimal"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+			android:key="Trim"
+			android:title="@string/pref_title_Trim">
+
+		<EditTextPreference
+				android:key="TrimCap"
+				android:title="@string/pref_title_TrimCap"
+				android:summary="@string/pref_summary_TrimCap"
+				android:defaultValue="0"
+				android:inputType="numberSigned"/>
+
+		<EditTextPreference
+				android:key="TrimTanguage"
+				android:title="@string/pref_title_TrimTanguage"
+				android:summary="@string/pref_summary_TrimTanguage"
+				android:defaultValue="0"
+				android:inputType="numberSigned"/>
+
+		<EditTextPreference
+				android:key="TrimRoulis"
+				android:title="@string/pref_title_TrimRoulis"
+				android:summary="@string/pref_summary_TrimRoulis"
+				android:defaultValue="0"
+				android:inputType="numberSigned"/>
+
+		<EditTextPreference
+				android:key="TrimXCam"
+				android:title="@string/pref_title_TrimXCam"
+				android:summary="@string/pref_summary_TrimXCam"
+				android:defaultValue="10"
+				android:inputType="numberSigned"/>
+
+		<EditTextPreference
+				android:key="TrimYCam"
+				android:title="@string/pref_title_TrimYCam"
+				android:summary="@string/pref_summary_TrimYCam"
+				android:defaultValue="10"
+				android:inputType="numberSigned"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+			android:key="Invert"
+			android:title="@string/pref_title_Invert">
+
+		<CheckBoxPreference
+				android:key="InvertGaz"
+				android:title="@string/pref_title_InvertGazOnOff"
+				android:summaryOn="@string/pref_summary_InvertGaz_On"
+				android:summaryOff="@string/pref_summary_InvertGaz_Off"
+				android:defaultValue="false"/>
+
+		<CheckBoxPreference
+				android:key="InvertCap"
+				android:title="@string/pref_title_InvertCapOnOff"
+				android:summaryOn="@string/pref_summary_InvertCap_On"
+				android:summaryOff="@string/pref_summary_InvertCap_Off"
+				android:defaultValue="false"/>
+
+		<CheckBoxPreference
+				android:key="InvertTanguage"
+				android:title="@string/pref_title_InvertTanguageOnOff"
+				android:summaryOn="@string/pref_summary_InvertTanguage_On"
+				android:summaryOff="@string/pref_summary_InvertTanguage_Off"
+				android:defaultValue="false"/>
+
+		<CheckBoxPreference
+				android:key="InvertRoulis"
+				android:title="@string/pref_title_InvertRoulisOnOff"
+				android:summaryOn="@string/pref_summary_InvertRoulis_On"
+				android:summaryOff="@string/pref_summary_InvertRoulis_Off"
+				android:defaultValue="false"/>
+
+		<CheckBoxPreference
+				android:key="InvertXCam"
+				android:title="@string/pref_title_InvertXCamOnOff"
+				android:summaryOn="@string/pref_summary_InvertXCam_On"
+				android:summaryOff="@string/pref_summary_InvertXCam_Off"
+				android:defaultValue="false"/>
+
+		<CheckBoxPreference
+				android:key="InvertYCam"
+				android:title="@string/pref_title_InvertYCamOnOff"
+				android:summaryOn="@string/pref_summary_InvertYCam_On"
+				android:summaryOff="@string/pref_summary_InvertYCam_Off"
+				android:defaultValue="false"/>
+	</PreferenceCategory>
+</PreferenceScreen>

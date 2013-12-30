@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+	  @author Marco Rinalducci
+	  @version 1.0.0 
+
+	  Copyright (C) 2013 The Android Open Source Project
+
+      Licensed under the Apache License, Version 2.0 (the "License");
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+			android:id="@+id/arme"
+			android:icon="@android:drawable/ic_menu_report_image"
+			android:title="@string/arme"
+			android:showAsAction="always"/>
+	<item
+			android:id="@+id/scan"
+			android:icon="@android:drawable/ic_menu_search"
+			android:title="@string/connect"
+			android:showAsAction="always"/>
+	<item
+			android:id="@+id/checklist"
+			android:icon="@android:drawable/ic_menu_info_details"
+			android:title="@string/checklist"
+			android:showAsAction="always"/>
+	<item
+			android:id="@+id/option"
+			android:icon="@android:drawable/ic_menu_manage"
+			android:title="@string/option"
+			android:showAsAction="always"/>
+
+	<item
+			android:id="@+id/emplois"
+			android:icon="@android:drawable/ic_menu_help"
+			android:title="@string/emploi"/>
+
+	<item
+			android:id="@+id/propos"
+			android:icon="@android:drawable/ic_menu_info_details"
+			android:title="@string/propos"/>
+</menu>
