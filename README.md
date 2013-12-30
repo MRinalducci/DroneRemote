@@ -11,6 +11,8 @@ Don't forget to import the project and not to open it.
 
 I will be happy if you let me now if you used this project to make yours. :)
 
+This application is available on the Google play at https://play.google.com/store/apps/details?id=ch.rinalducci.DroneRemote
+
 ## Changelog
 
 30.12.2013 : Release on GitHub
