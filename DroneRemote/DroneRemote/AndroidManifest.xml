@@ -20,12 +20,12 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ch.rinalducci.DroneRemote"
-    android:versionCode="35"
-    android:versionName="1.0.1" >
+    android:versionCode="36"
+    android:versionName="1.0.2" >
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="19" />
     
     <compatible-screens>
         <!-- normal size screens -->

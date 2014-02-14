@@ -23,6 +23,7 @@
 
 package ch.rinalducci.DroneRemote;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -40,11 +41,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
-import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.os.Handler;
-import android.os.Message;
-import android.os.Vibrator;
+import android.os.*;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.speech.tts.TextToSpeech;
@@ -415,27 +412,36 @@ public class DroneRemoteActivity extends Activity implements OnSharedPreferenceC
 	/**
 	 * Called when the activity will be launched
 	 */
-	@SuppressWarnings("deprecation")
-	// Constant Settings.System.AIRPLANE_MODE_ON deprecated in API Level 17 use Settings.Global.AIRPLANE_MODE_ON instead
+	@TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
 	@Override
 	protected void onStart()
 	{
 		super.onStart();
 
-		boolean airplaneIsEnabled = Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) == 1;
+		int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+		boolean airplaneIsEnabled;
+		if (currentapiVersion >= Build.VERSION_CODES.JELLY_BEAN_MR1){
+			airplaneIsEnabled = Settings.Global.getInt(context.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0) == 1;
+		} else{
+			airplaneIsEnabled = Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) == 1;
+		}
 
 		if (!airplaneIsEnabled)
 		{
-			// toggle airplane mode
-			Settings.System.putInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 1);
+			if (currentapiVersion >= Build.VERSION_CODES.JELLY_BEAN_MR1){
+				//
+			} else{
+				// toggle airplane mode
+				Settings.System.putInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 1);
 
-			// Change so that only phone is turned off
-			Settings.System.putString(context.getContentResolver(), Settings.System.AIRPLANE_MODE_RADIOS, "cell");
+				// Change so that only phone is turned off
+				Settings.System.putString(context.getContentResolver(), Settings.System.AIRPLANE_MODE_RADIOS, "cell");
 
-			// Reload
-			Intent intent = new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED);
-			intent.putExtra("state", !airplaneIsEnabled);
-			sendBroadcast(intent);
+				// Reload
+				Intent intent = new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+				intent.putExtra("state", !airplaneIsEnabled);
+				sendBroadcast(intent);
+			}
 		}
 
 		// Request enable bluetooth
@@ -573,24 +579,33 @@ public class DroneRemoteActivity extends Activity implements OnSharedPreferenceC
 	/**
 	 * Called when the activity will be stopped
 	 */
-	@SuppressWarnings("deprecation")
-	// Constant Settings.System.AIRPLANE_MODE_ON deprecated in API Level 17 use Settings.Global.AIRPLANE_MODE_ON instead
+	@TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
 	@Override
 	protected void onStop()
 	{
 		super.onStop();
 
-		boolean isEnabled = Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) == 1;
+		int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+		boolean airplaneIsEnabled;
+		if (currentapiVersion >= Build.VERSION_CODES.JELLY_BEAN_MR1){
+			airplaneIsEnabled = Settings.Global.getInt(context.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0) == 1;
+		} else{
+			airplaneIsEnabled = Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) == 1;
+		}
 
-		if (isEnabled)
+		if (airplaneIsEnabled)
 		{
-			// toggle airplane mode
-			Settings.System.putInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0);
+			if (currentapiVersion >= Build.VERSION_CODES.JELLY_BEAN_MR1){
+				//
+			} else{
+				// toggle airplane mode
+				Settings.System.putInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0);
 
-			// Reload
-			Intent intent = new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED);
-			intent.putExtra("state", !isEnabled);
-			sendBroadcast(intent);
+				// Reload
+				Intent intent = new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+				intent.putExtra("state", !airplaneIsEnabled);
+				sendBroadcast(intent);
+			}
 		}
 	}
 
